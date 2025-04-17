@@ -102,14 +102,14 @@
         <h2>Our Services</h2>
         <div class="services">
             <div class="service">
-                <img src="img/flakes-scoop-ai.png" alt="PET flakes" loading="lazy" decoding="async" />
+                <img src="img/flakes-scoop-ai.png" alt="PET flakes" loading="lazy" decoding="async" class="unselectable" />
                 <div class="service-text">
                     <h3>Custom Sorting & Tailored Production</h3>
                     <p>Delivery exactly to your specifications – color sorting, material types, or specific production parameters.</p>
                 </div>
             </div>
             <div class="service">
-                <img src="img/technical-support.jpg" alt="PET flakes" loading="lazy" decoding="async" />
+                <img src="img/technical-support.jpg" alt="PET flakes" loading="lazy" decoding="async" class="unselectable" />
                 <div class="service-text">
                     <h3>Expert Technical Support</h3>
                     <p>Our experienced team supports you from product selection to integration into your production line.</p>
@@ -120,43 +120,89 @@
 
 </main>
 
-<aside>
+<aside class="carousel-aside unselectable">
     <div class="carousel">
         <div class="carousel-track">
-            <img src="img/technical-support.jpg" alt="Bild 1">
-            <img src="img/flakes-scoop-ai.png" alt="Bild 2">
-            <img src="img/pet-flakes-blob.png" alt="Bild 3">
-
-            <img src="img/technical-support.jpg" alt="Bild 1">
-            <img src="img/flakes-scoop-ai.png" alt="Bild 2">
-            <img src="img/pet-flakes-blob.png" alt="Bild 3">
-
+            <img src="img/factory-inside.jpg" alt="Bild 1">
+            <img src="img/pet-flakes-on-band.jpg"      alt="Bild 2">
+            <img src="img/many-bags.jpg"      alt="Bild 2">
+            <img src="img/pet-flakes.jpg"      alt="Bild 3">
+            <img src="img/bags.jpg"      alt="Bild 3">
+            <img src="img/flakes-on-cotton.jpg"      alt="Bild 3">
         </div>
     </div>
 </aside>
 
 <footer>
     <div class="footer">
-        <p>PET Flakes for production needs</p>
+        <div class="footer-columns-wrapper unselectable">
+            <!-- Social Media Spalte -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="https://facebook.com/deinprofil" aria-label="Facebook"><img src="img/tiktok_logo.svg" alt=""></a></li>
+                    <li><a href="https://twitter.com/deinprofil" aria-label="Twitter"><img src="img/whatsApp_logo.svg" alt=""></a></li>
+                    <li><a href="https://linkedin.com/company/deinfirma" aria-label="LinkedIn"><img src="img/instagram_logo.svg" alt=""></a></li>
+                </ul>
+            </div>
 
-        <nav class="desktop-nav unselectable">
-            <ul class="nav-links">
-                <li><a href="index.html" class="header-link active">Home</a></li>
-                <li><a href="about.html" class="header-link">About Us</a></li>
-                <li><a href="products.html" class="header-link">Products</a></li>
-                <li><a href="logistics.html" class="header-link">Logistics</a></li>
-                <li><a href="partnerships.html" class="header-link">Partnerships</a></li>
-                <li><a href="sustainability.html" class="header-link">Sustainability</a></li>
-                <li><a href="request-sample.html" class="header-link btn">Request Sample</a></li>
-                <li><a href="news.html" class="header-link">News</a></li>
-                <li><a href="contact.html" class="header-link">Contact</a></li>
-            </ul>
-        </nav>
+            <!-- Link-Spalten -->
+            <nav class="footer-nav">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Products &amp; Services</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="logistics.html">Logistics</a></li>
+                        <li><a href="partnerships.html">Partnerships</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
 
         <p>&copy; 2025 RePET Plex. All rights reserved.</p>
     </div>
 </footer>
 
+
+
+<script>
+    (function() {
+        const track = document.querySelector('.carousel-track');
+        const speed = 1; // Pixel pro Frame
+        let pos = 0;
+
+        // Klone alle Bilder einmal ans Ende, damit nie eine Lücke entsteht
+        const images = Array.from(track.children);
+        images.forEach(img => track.appendChild(img.cloneNode()));
+
+        function animate() {
+            pos -= speed;
+            // Wenn das erste Bild komplett rausgelaufen ist:
+            const firstImg = track.children[0];
+            if (Math.abs(pos) >= firstImg.clientWidth) {
+                // Position zurücksetzen um genau eine Bildbreite
+                pos += firstImg.clientWidth;
+                // UND das erste Bild zum Ende verschieben
+                track.appendChild(firstImg);
+            }
+            track.style.transform = `translateX(${pos}px)`;
+            requestAnimationFrame(animate);
+        }
+
+        // Animation starten
+        animate();
+    })();
+</script>
 <script src="menu-btn.js"></script>
 
 </body>

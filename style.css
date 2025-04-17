@@ -428,42 +428,77 @@ header {
 
 main {
 }
-
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--off-white);
-    border-bottom: none;
-    border-radius: var(--border-radius-anti-corner) var(--border-radius-anti-corner) 0 0;
-    padding: var(--padding-max);
     width: 100%;
-    margin-top: 10vw;
+    background-color: var(--gray);
 }
 .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--black);
+    justify-self: center;
+    align-self: center;
     width: var(--app-width);
+    color: var(--highlite-white);
 }
-.footer > :first-child {
-    align-self: start;
+.footer-columns-wrapper {
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.footer > :nth-child(2) {
+.footer-column li {
+    margin-bottom: .4rem;
+}
+.footer-nav {
     display: flex;
     flex-direction: row;
-    column-gap: 1vw;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 3rem;
+    width: 40%;
 }
-.footer > :nth-child(3) {
-    margin-top: 1vw;
-    margin-bottom: 0;
-    font-size: var(--small);
-    color: var(--gray4);
+.footer-columns-wrapper h4 {
+    color: var(--primary);
+    margin-bottom: 0.75rem;
 }
+.footer-nav a:link,
+.footer-nav a:visited {
+    color: var(--highlite-white);
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: var(--light);
+}
+.footer-nav a:active {
+    color: var(--primary);
+}
+/* Social‑Media‑Spalte */
+.footer-social {
+    flex: 0 0 auto;
+    min-width: 120px;
+}
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+.footer-social li {
+    display: inline-block;
+}
+.footer-social a img {
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    padding-right: 1rem;
+    filter: grayscale(100%);      /* Icons standardmäßig entsättigt */
+    transition: filter 0.2s;
+}
+.footer-social a:hover img {
+    filter: none;                 /* beim Hover farbig anzeigen */
+}
+
+
 
 .full-width-element {
     width: 100%;
@@ -845,25 +880,23 @@ footer {
     }
 }
 
-
-/* Container und Ausblenden des Überlaufs */
+.carousel-aside {
+    width: 100%;
+    overflow: hidden;
+}
 .carousel {
     overflow: hidden;
     width: 100%;
-    height: 300px;
+    position: relative;
+    margin-top: 5rem;
 }
 .carousel-track {
     display: flex;
-    column-gap: 3rem;
-    width: 100%;
-    animation: scroll-left 5s linear infinite;
+    will-change: transform;
 }
-
-
-/* Bilder: proportional und nebeneinander */
 .carousel-track img {
     flex-shrink: 0;
-    width: calc(100% / 3); /* 3 Originalbilder passen genau nebeneinander */
     height: 100%;
+    width: 15rem;
     object-fit: cover;
 }
