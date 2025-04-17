@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RePET Global - About Us</title>
+    <meta name="description" content="Learn about RePET Global, a leading PET plastic recycling exporter with operations in Tunisia and Europe. Our background, experience, and commitment to quality.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">RePET Global</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2"
+                aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav2">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="logistics.html">Logistics &amp; Transport</a></li>
+                <li class="nav-item"><a class="nav-link" href="partnerships.html">Partnerships</a></li>
+                <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-success text-white ms-md-2" href="request-sample.html">Request Sample</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="py-5 bg-light text-center">
+    <h1>About Us</h1>
+</header>
+
+<main class="container my-5">
+    <section class="mb-5">
+        <h2>Company Background</h2>
+        <p>Founded in 2010 by a team of recycling enthusiasts, RePET Global has grown into a leading provider of recycled PET flakes. What began as a local initiative in Tunisia has expanded into an international operation, supplying partners across Europe and beyond. Our core business is converting post-consumer PET bottles into <strong>high-quality PET flakes</strong> that meet the rigorous standards of manufacturers for fibers, packaging, and other applications.</p>
+        <p>Over the years, we have invested in advanced cleaning and processing technology to ensure that our flakes are of consistently high purity and quality. This dedication to excellence has earned us a reputation for reliability and trust in the recycling industry.</p>
+    </section>
+
+    <section class="mb-5">
+        <h2>Our Global Presence</h2>
+        <p>RePET Global operates in both North Africa and Europe, bridging supply and demand across continents. Our main recycling facility is strategically located in Tunisia, where we have access to abundant raw materials (used PET bottles) and skilled labor. Here, bottles are collected, sorted, washed, and transformed into clean PET flakes ready for export.</p>
+        <p>In addition, we maintain a distribution warehouse in Europe (Germany) to serve our European customers with just-in-time deliveries. By storing product closer to our clients, we can fulfill orders rapidly and offer flexible shipping options. This dual presence enables us to offer competitive pricing and efficient logistics to customers worldwide.</p>
+    </section>
+
+    <section>
+        <h2>Experienced Team</h2>
+        <p>Our team is the heart of our business. We are proud to have a diverse group of professionals with deep experience in plastics recycling, international trade, and quality management. From engineers and technicians who oversee the washing and production process, to logistics experts who coordinate shipments, every member of the RePET Global family is committed to delivering the best to our partners.</p>
+        <p>We believe in continuous learning and improvement. Our staff regularly undergo training in the latest recycling techniques and international export regulations, ensuring we stay at the forefront of the industry. At RePET Global, a culture of quality and integrity drives us to not only meet, but exceed, our clients’ expectations.</p>
+    </section>
+</main>
+
+<footer class="bg-light py-4">
+    <div class="container text-center">
+        <p>&copy; 2025 RePET Global. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

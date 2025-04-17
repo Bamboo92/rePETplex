@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Continuous Image Carousel</title>
+    <style>
+        /* Der sichtbare Bereich */
+        .carousel {
+            overflow: hidden;
+            width: 100%;
+            height: 300px; /* Höhe nach Wunsch anpassen */
+            position: relative;
+        }
+
+        /* Die Track mit den Bildern */
+        .carousel-track {
+            display: flex;
+            will-change: transform;
+        }
+
+        /* Alle Bilder gleich hoch, behalten ihr Seitenverhältnis */
+        .carousel-track img {
+            flex-shrink: 0;
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<div class="carousel">
+    <div class="carousel-track">
+        <img src="img/technical-support.jpg" alt="Bild 1">
+        <img src="img/flakes-scoop-ai.png"      alt="Bild 2">
+        <img src="img/pet-flakes-blob.png"      alt="Bild 3">
+    </div>
+</div>
+
+<script>
+    (function() {
+        const track = document.querySelector('.carousel-track');
+        const speed = 20; // Pixel pro Frame
+        let pos = 0;
+
+        // Klone alle Bilder einmal ans Ende, damit nie eine Lücke entsteht
+        const images = Array.from(track.children);
+        images.forEach(img => track.appendChild(img.cloneNode()));
+
+        function animate() {
+            pos -= speed;
+            // Wenn das erste Bild komplett rausgelaufen ist:
+            const firstImg = track.children[0];
+            if (Math.abs(pos) >= firstImg.clientWidth) {
+                // Position zurücksetzen um genau eine Bildbreite
+                pos += firstImg.clientWidth;
+                // UND das erste Bild zum Ende verschieben
+                track.appendChild(firstImg);
+            }
+            track.style.transform = `translateX(${pos}px)`;
+            requestAnimationFrame(animate);
+        }
+
+        // Animation starten
+        animate();
+    })();
+</script>
+
+</body>
+</html>
