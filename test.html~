@@ -41,7 +41,7 @@
 <script>
     (function() {
         const track = document.querySelector('.carousel-track');
-        const speed = 20; // Pixel pro Frame
+        const speed = 2; // Pixel pro Frame
         let pos = 0;
 
         // Klone alle Bilder einmal ans Ende, damit nie eine Lücke entsteht
