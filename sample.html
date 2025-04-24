@@ -1,59 +1,114 @@
-<!-- sample.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RePET Global - Request Sample</title>
-    <meta name="description" content="Request a sample of our washed PET flakes. Please fill out the form with your details and requirements.">
+    <title>RePET Plex – Technical Specifications</title>
+    <meta name="description" content="Detailed technical specifications for our hot-washed PET flakes: size, moisture, viscosity, impurities, packing and more.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="navbar">
-    <div class="nav-container">
-        <a class="brand" href="index.html">RePET Global</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="logistics.html">Logistics</a></li>
-            <li><a href="partnerships.html">Partnerships</a></li>
-            <li><a href="sustainability.html">Sustainability</a></li>
-            <li><a href="sample.html" class="active btn">Request Sample</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</nav>
 
-<header class="page-header">
-    <h1>Request a Sample</h1>
+<header>
+    <div class="nav-header">
+        <div class="logo unselectable">
+            <a href="index.html"><img class="logo-img" src="img/logo.svg" alt="rePet Plex logo" loading="lazy" decoding="async" fetchpriority="high" /></a>
+            <a href="index.html"><h1 class="logo-text"><span>rePET</span><span>PLEX</span></h1></a>
+        </div>
+
+        <div class="menu-btn-wrapper" id="menuBtnWrapper">
+            <button class="menu-btn" id="menuBtn" aria-label="Menü">
+                <span class="line top"></span>
+                <span class="line middle"></span>
+                <span class="line bottom"></span>
+            </button>
+        </div>
+
+        <nav class="desktop-nav unselectable">
+            <ul class="nav-links">
+                <li><a href="products.html" class="header-link">Products</a></li>
+                <li><a href="sample.html" class="header-link btn flat-btn">Request Sample</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Mobile Navigation Drop-Down (under the Header) -->
+    <nav class="mobile-nav unselectable" id="mobileNav">
+        <ul class="nav-links">
+            <li><a href="products.html" class="header-link">Products</a></li>
+            <li><a href="sample.html" class="header-link btn flat-btn">Request Sample</a></li>
+        </ul>
+    </nav>
 </header>
 
-<main class="container">
-    <p>If you are interested in evaluating our product, please fill in the form below with your company details and specific requirements. We provide samples for serious commercial inquiries only.</p>
-    <form class="form" action="mailto:contact@repetglobal.com" method="post" enctype="text/plain">
-        <label for="company">Company Name <span class="required">*</span></label>
-        <input type="text" id="company" name="Company" required>
-
-        <label for="contact">Contact Person <span class="required">*</span></label>
-        <input type="text" id="contact" name="Contact" required>
-
-        <label for="email">Email <span class="required">*</span></label>
-        <input type="email" id="email" name="Email" required>
-
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="Phone">
-
-        <label for="specs">Specifications / Requirements <span class="required">*</span></label>
-        <textarea id="specs" name="Specifications" rows="4" placeholder="Describe the sample needed..." required></textarea>
-
-        <button type="submit" class="btn primary">Submit Request</button>
+<main class="app not-index-main" style="flex: 1;">
+    <div>
+        <h2>Request a Sample</h2>
+        <p>If you are interested in evaluating our product, please fill in the form below with your company details and specific requirements. We provide samples for serious commercial inquiries only.</p>
+    </div>
+    <form class="form" action="mailto:mmiizz9922@gmail.com" method="post" enctype="text/plain">
+        <div class="form-group">
+            <label for="company">Company Name <span class="required">*</span></label>
+            <input type="text" id="company" name="Company" required>
+        </div>
+        <div class="form-group">
+            <label for="contact">Contact Person <span class="required">*</span></label>
+            <input type="text" id="contact" name="Contact" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="Email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="Phone">
+        </div>
+        <div class="form-group">
+            <label for="specs">Specifications / Requirements <span class="required">*</span></label>
+            <textarea id="specs" name="Specifications" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="flat-btn btn">Submit Request</button>
     </form>
 </main>
 
-<footer class="footer">
-    <p>&copy; 2025 RePET Global. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+<footer>
+    <div class="footer">
+        <div class="footer-columns-wrapper unselectable">
+            <!-- Social Media Spalte -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="https://facebook.com/deinprofil" aria-label="Facebook"><img src="img/tiktok_logo.svg" alt=""></a></li>
+                    <li><a href="https://twitter.com/deinprofil" aria-label="Twitter"><img src="img/whatsApp_logo.svg" alt=""></a></li>
+                    <li><a href="https://linkedin.com/company/deinfirma" aria-label="LinkedIn"><img src="img/instagram_logo.svg" alt=""></a></li>
+                </ul>
+            </div>
+
+            <!-- Link-Spalten -->
+            <nav class="footer-nav">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Products &amp; Services</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="sample.html">Request Sample</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <p>&copy; 2025 RePET Plex. All rights reserved.</p>
+    </div>
 </footer>
+
+<script src="menu-btn.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>

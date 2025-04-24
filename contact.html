@@ -9,28 +9,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="navbar">
-    <div class="nav-container">
-        <a class="brand" href="index.html">RePET Global</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="logistics.html">Logistics</a></li>
-            <li><a href="partnerships.html">Partnerships</a></li>
-            <li><a href="sustainability.html">Sustainability</a></li>
-            <li><a href="sample.html" class="btn">Request Sample</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+<header>
+    <div class="nav-header">
+        <div class="logo unselectable">
+            <a href="index.html"><img class="logo-img" src="img/logo.svg" alt="rePet Plex logo" loading="lazy" decoding="async" fetchpriority="high" /></a>
+            <a href="index.html"><h1 class="logo-text"><span>rePET</span><span>PLEX</span></h1></a>
+        </div>
 
-<header class="page-header">
-    <h1>Contact Us</h1>
+        <div class="menu-btn-wrapper" id="menuBtnWrapper">
+            <button class="menu-btn" id="menuBtn" aria-label="Menü">
+                <span class="line top"></span>
+                <span class="line middle"></span>
+                <span class="line bottom"></span>
+            </button>
+        </div>
+
+        <nav class="desktop-nav unselectable">
+            <ul class="nav-links">
+                <li><a href="products.html" class="header-link">Products</a></li>
+                <li><a href="sample.html" class="header-link btn flat-btn">Request Sample</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Mobile Navigation Drop-Down (under the Header) -->
+    <nav class="mobile-nav unselectable" id="mobileNav">
+        <ul class="nav-links">
+            <li><a href="products.html" class="header-link">Products</a></li>
+            <li><a href="sample.html" class="header-link btn flat-btn">Request Sample</a></li>
+        </ul>
+    </nav>
 </header>
 
-<main class="container">
+<main class="app not-index-main" style="flex: 1;">
     <div class="contact-details">
         <div class="contact-box">
             <h2>Tunisia Office</h2>
@@ -55,28 +65,71 @@
     </div>
 
     <section class="contact-form-section">
-        <h2>Send a Message</h2>
-        <p>If you have any questions or need more information, please fill out the form below. We will respond promptly.</p>
-        <form class="form" action="mailto:contact@repetglobal.com" method="post" enctype="text/plain">
-            <label for="name">Your Name <span class="required">*</span></label>
-            <input type="text" id="name" name="Name" required>
-
-            <label for="companyContact">Company</label>
-            <input type="text" id="companyContact" name="Company">
-
-            <label for="emailContact">Email <span class="required">*</span></label>
-            <input type="email" id="emailContact" name="Email" required>
-
-            <label for="message">Message <span class="required">*</span></label>
-            <textarea id="message" name="Message" rows="4" required></textarea>
-
-            <button type="submit" class="btn primary">Send Message</button>
+        <div class="section-title">
+            <h2>Send a Message</h2>
+            <p>If you have any questions or need more information, please fill out the form below. We will respond promptly.</p>
+        </div>
+        <form class="form" action="mailto:mmiizz9922@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Your Name <span class="required">*</span></label>
+                <input type="text" id="name" name="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="companyContact">Company</label>
+                <input type="text" id="companyContact" name="Company">
+            </div>
+            <div class="form-group">
+                <label for="emailContact">Email <span class="required">*</span></label>
+                <input type="email" id="emailContact" name="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message <span class="required">*</span></label>
+                <textarea id="message" name="Message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="flat-btn btn">Submit Request</button>
         </form>
     </section>
 </main>
 
-<footer class="footer">
-    <p>&copy; 2025 RePET Global. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+<footer>
+    <div class="footer">
+        <div class="footer-columns-wrapper unselectable">
+            <!-- Social Media Spalte -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="https://facebook.com/deinprofil" aria-label="Facebook"><img src="img/tiktok_logo.svg" alt=""></a></li>
+                    <li><a href="https://twitter.com/deinprofil" aria-label="Twitter"><img src="img/whatsApp_logo.svg" alt=""></a></li>
+                    <li><a href="https://linkedin.com/company/deinfirma" aria-label="LinkedIn"><img src="img/instagram_logo.svg" alt=""></a></li>
+                </ul>
+            </div>
+
+            <!-- Link-Spalten -->
+            <nav class="footer-nav">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Products &amp; Services</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="sample.html">Request Sample</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <p>&copy; 2025 RePET Plex. All rights reserved.</p>
+    </div>
 </footer>
+
+<script src="menu-btn.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
