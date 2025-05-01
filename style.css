@@ -29,6 +29,7 @@
 
     --highlite-white: #FFFFFF;
     --off-white: #ECEBF3;
+    --contrast-white: #FDFFFF;
     --void-black: #000000;
     --black: #09090D;
     --darkmode-black: #0e0e11;
@@ -47,7 +48,6 @@
     --gray: #434F52;
 
     --gold: #FFD700;
-
 
     --950: #423155;
     --900: #55406f;
@@ -70,7 +70,7 @@
 
     --colored-box-shadow: #8057ab80;
 
-    --background-color: var(--highlite-white);
+    --background-color: var(--contrast-white);
     --font-color: var(--black);
 
     --app-width: 70%;
@@ -630,6 +630,7 @@ footer {
     color: var(--font-color);
 }
 .prop {
+    background-color: var(--highlite-white);
     border-radius: var(--border-radius-anti-corner);
     transition: all 0.2s ease-in-out;
 }
@@ -700,6 +701,7 @@ footer {
     padding: var(--padding-max);
     border-radius: var(--border-radius-anti-corner);
     box-shadow: 0 35px 35px -15px rgba(0, 0, 0, 0.10);
+    background-color: var(--highlite-white);
 }
 .form label {
     margin-top: 0.3em;
@@ -928,6 +930,9 @@ footer {
     background-color: var(--off-white);
     font-weight: 600;
     width: 25%;
+}
+.tech-specs td {
+    background-color: var(--highlite-white);
 }
 .tech-specs tr + tr th,
 .tech-specs tr + tr td {
