@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Grundlegende Metadaten -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RePET Plex – Technical Specifications</title>
-    <meta name="description" content="Detailed technical specifications for our hot-washed PET flakes: size, moisture, viscosity, impurities, packing and more.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titel und Beschreibung -->
+    <title>rePET Plex - Home Page | Hot washed PET flakes</title>
+    <meta name="description" content="RePET PLEX – your source for sustainable, washed PET recycling flakes, offering premium quality and reliable performance for your production.">
+
+    <!-- Autor und Copyright -->
+    <meta name="author" content="Bamboo">
+    <meta name="copyright" content="&copy; 2025 rePET Plex">
+
+    <!-- Suchmaschinen (SEO) -->
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="PET recycling flakes, recycled PET flakes, hot-washed PET, eco-friendly PET recycling, recycled plastic flakes, recycled polymer granules, PET bottle recycling, circular economy plastics, sustainable packaging materials, recycled plastic suppliers, eco-friendly, rePET, rePET flakes">
+
+    <!-- Soziale Netzwerke / Open Graph -->
+    <meta property="og:title" content="rePET Plex">
+    <meta property="og:description" content="RePET PLEX: sustainable, hot-washed PET flakes for premium quality and eco-friendly production.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://repetplex.com">
+    <meta property="og:image" content="https://repetplex.com/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="rePET Plex">
+    <meta name="twitter:description" content="RePET PLEX: sustainable, hot-washed PET flakes for premium quality and eco-friendly production.">
+    <meta name="twitter:image" content="https://repetplex.com/twitter-image.jpg">
+    <meta name="twitter:site" content="@repetplex">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="rePET Plex" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://repetplex.com/">
+
+    <!-- Theme Color für mobile Browser -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,17 +66,31 @@
             </button>
         </div>
 
-        <nav class="desktop-nav unselectable">
-            <ul class="nav-links">
-                <li><a href="products.html" class="header-link">Products</a></li>
-                <li><a href="sample.html" class="header-link btn flat-btn">Request Sample</a></li>
-            </ul>
-        </nav>
+        <div class="nav-wrapper">
+            <nav class="desktop-nav unselectable">
+                <ul class="nav-links">
+                    <li><a href="products.html" class="header-link">Products</a></li>
+                    <li><a href="contact.html" class="header-link">Contact</a></li>
+                    <li><a href="sample.html" class="header-link btn flat-btn">Request Sample</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <button class="lang-btn">
+                    <img src="img/flag/en.svg" alt="Language" />
+                </button>
+                <ul class="lang-dropdown">
+                    <li><a href="/de/"><img src="img/flag/de.svg" alt="Deutsch" /></a></li>
+                    <li><a href="/fr/"><img src="img/flag/fr.svg" alt="Français" /></a></li>
+                    <li><a href="/ar/"><img src="img/flag/ar.svg" alt="Arabic" /></a></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <!-- Mobile Navigation Drop-Down (under the Header) -->
     <nav class="mobile-nav unselectable" id="mobileNav">
         <ul class="nav-links">
             <li><a href="products.html" class="header-link">Products</a></li>
+            <li><a href="contact.html" class="header-link">Contact</a></li>
             <li><a href="sample.html" class="header-link btn flat-btn">Request Sample</a></li>
         </ul>
     </nav>
@@ -42,7 +98,10 @@
 
 <main class="app not-index-main" style="flex: 1;">
     <div>
-        <h2>Request a Sample</h2>
+        <div class="animated-title-wrapper">
+            <div class="mask-overlay"></div>
+            <h2 class="animated-title">Request a Samples</h2>
+        </div>
         <p>If you are interested in evaluating our product, please fill in the form below with your company details and specific requirements. We provide samples for serious commercial inquiries only.</p>
     </div>
     <form class="form" action="mailto:mmiizz9922@gmail.com" method="post" enctype="text/plain">

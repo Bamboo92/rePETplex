@@ -43,7 +43,7 @@
     --primary: #05B2DC;
     --secondary: #1C448E;
     --accent: #05B2DC;
-    --light: #97c6f1;
+    --light: #97c5f0;
     --gray: #434F52;
 
     --gold: #FFD700;
@@ -408,6 +408,12 @@ header {
     align-items: center;
     width: 100%;
 }
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: var(--padding-max);
+}
 .nav-header {
     display: flex;
     flex-direction: row;
@@ -495,11 +501,11 @@ footer {
     height: 4rem;
     display: block;
     padding-right: 1rem;
-    filter: grayscale(100%);      /* Icons standardmäßig entsättigt */
+    filter: grayscale(100%);
     transition: filter 0.2s;
 }
 .footer-social a:hover img {
-    filter: none;                 /* beim Hover farbig anzeigen */
+    filter: none;
 }
 
 
@@ -659,10 +665,18 @@ footer {
     align-items: start;
     justify-content: center;
     padding-block: 1rem;
+    transition: padding 0.2s ease-in-out;
+}
+.service:hover .service-text {
+    padding-block: 0;
 }
 .service img {
     width: 15%;
     object-fit: cover;
+    transition: padding-left 0.2s ease-in-out;
+}
+.service:hover img {
+    padding-left: 1rem;
 }
 .service h3,
 .service p {
@@ -922,6 +936,47 @@ footer {
 .tech-specs tr + tr td {
     border-top: 1px solid var(--gray3);
 }
+.animated-title-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient-Overlay, initial sichtbar */
+.mask-overlay {
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0.3) 10%,
+            rgba(255, 255, 255, 0) 100%
+    );
+    transition: opacity 1s ease-out;
+    opacity: 1;
+    z-index: 10;
+}
+
+/* Titel selbst über Overlay legen */
+.animated-title {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.4s ease-out;
+}
+
+/* Wenn in view: hide overlay + slide-in title */
+.animated-title-wrapper.in-view .mask-overlay {
+    opacity: 0; /* blendet den Gradient aus */
+}
+
+.animated-title-wrapper.in-view .animated-title {
+    transform: translateX(0);
+    opacity: 1;
+}
+
 
 @media only screen and (min-width: 800px) {
     .hero-content h1 {
@@ -1028,4 +1083,64 @@ footer {
     .menu-btn {
         display: none;
     }
+}
+
+
+.language-switcher {
+    position: relative;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.lang-btn img {
+    width: 2rem;
+    min-width: 15px;
+    max-width: 35px;
+}
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    right: -10px;
+    background: var(--highlite-white);
+    list-style: none;
+    padding: 1rem 0 .3rem;
+    margin: 0;
+    z-index: 999;
+    border-radius: var(--border-radius-smoothe);
+    box-shadow: 0 35px 35px -15px rgba(0, 0, 0, 0.10);
+}
+.lang-dropdown img {
+    width: 2rem;
+    min-width: 15px;
+    max-width: 35px;
+    transition: scale 0.2s ease;
+}
+.lang-dropdown img:hover {
+    scale: 1.1;
+}
+.language-switcher:hover .lang-dropdown {
+    display: block;
+}
+.lang-dropdown li {
+    padding: .5rem 10px;
+}
+.lang-dropdown li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.lang-btn img {
+    transition: filter 0.3s ease;
+}
+
+/* Beim Hover über die gesamte Sprach-Auswahl wird das Haupt-Icon grau */
+.language-switcher:hover .lang-btn img {
+    filter: grayscale(100%);
 }

@@ -1,55 +1,166 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Grundlegende Metadaten -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RePET Global - About Us</title>
-    <meta name="description" content="Learn about RePET Global, a leading PET recycling exporter with operations in Tunisia and Europe.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titel und Beschreibung -->
+    <title>rePET Plex - Home Page | Hot washed PET flakes</title>
+    <meta name="description" content="RePET PLEX – your source for sustainable, washed PET recycling flakes, offering premium quality and reliable performance for your production.">
+
+    <!-- Autor und Copyright -->
+    <meta name="author" content="Bamboo">
+    <meta name="copyright" content="&copy; 2025 rePET Plex">
+
+    <!-- Suchmaschinen (SEO) -->
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="PET recycling flakes, recycled PET flakes, hot-washed PET, eco-friendly PET recycling, recycled plastic flakes, recycled polymer granules, PET bottle recycling, circular economy plastics, sustainable packaging materials, recycled plastic suppliers, eco-friendly, rePET, rePET flakes">
+
+    <!-- Soziale Netzwerke / Open Graph -->
+    <meta property="og:title" content="rePET Plex">
+    <meta property="og:description" content="RePET PLEX: sustainable, hot-washed PET flakes for premium quality and eco-friendly production.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://repetplex.com">
+    <meta property="og:image" content="https://repetplex.com/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="rePET Plex">
+    <meta name="twitter:description" content="RePET PLEX: sustainable, hot-washed PET flakes for premium quality and eco-friendly production.">
+    <meta name="twitter:image" content="https://repetplex.com/twitter-image.jpg">
+    <meta name="twitter:site" content="@repetplex">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="rePET Plex" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://repetplex.com/">
+
+    <!-- Theme Color für mobile Browser -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="navbar">
-    <div class="nav-container">
-        <a class="brand" href="index.html">RePET Global</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="logistics.html">Logistics</a></li>
-            <li><a href="partnerships.html">Partnerships</a></li>
-            <li><a href="sustainability.html">Sustainability</a></li>
-            <li><a href="sample.html" class="btn">Request Sample</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+<header>
+    <div class="nav-header">
+        <div class="logo unselectable">
+            <a href="index.html"><img class="logo-img" src="img/logo.svg" alt="rePet Plex logo" loading="lazy" decoding="async" fetchpriority="high" /></a>
+            <a href="index.html"><h1 class="logo-text"><span>rePET</span><span>PLEX</span></h1></a>
+        </div>
 
-<header class="page-header">
-    <h1>About Us</h1>
+        <div class="menu-btn-wrapper" id="menuBtnWrapper">
+            <button class="menu-btn" id="menuBtn" aria-label="Menü">
+                <span class="line top"></span>
+                <span class="line middle"></span>
+                <span class="line bottom"></span>
+            </button>
+        </div>
+
+        <div class="nav-wrapper">
+            <nav class="desktop-nav unselectable">
+                <ul class="nav-links">
+                    <li><a href="products.html" class="header-link">Products</a></li>
+                    <li><a href="contact.html" class="header-link">Contact</a></li>
+                    <li><a href="sample.html" class="header-link btn flat-btn">Request Sample</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <button class="lang-btn">
+                    <img src="img/flag/en.svg" alt="Language" />
+                </button>
+                <ul class="lang-dropdown">
+                    <li><a href="/de/"><img src="img/flag/de.svg" alt="Deutsch" /></a></li>
+                    <li><a href="/fr/"><img src="img/flag/fr.svg" alt="Français" /></a></li>
+                    <li><a href="/ar/"><img src="img/flag/ar.svg" alt="Arabic" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Navigation Drop-Down (under the Header) -->
+    <nav class="mobile-nav unselectable" id="mobileNav">
+        <ul class="nav-links">
+            <li><a href="products.html" class="header-link">Products</a></li>
+            <li><a href="contact.html" class="header-link">Contact</a></li>
+            <li><a href="sample.html" class="header-link btn flat-btn">Request Sample</a></li>
+        </ul>
+    </nav>
 </header>
 
-<main class="container">
+<main class="app not-index-main" style="flex: 1;">
     <section>
-        <h2>Company Background</h2>
+        <div class="animated-title-wrapper">
+            <div class="mask-overlay"></div>
+            <h2 class="animated-title">Company Background</h2>
+        </div>
         <p>Founded in 2010 by a team passionate about recycling, RePET Global has grown into a leading provider of recycled PET flakes. What began in Tunisia has expanded into an international operation, supplying partners across Europe and beyond.</p>
         <p>We use advanced cleaning and processing technology to ensure high-quality flakes meeting rigorous standards for manufacturers. Our commitment to quality and sustainability has earned us a reputation for reliability.</p>
     </section>
 
     <section>
-        <h2>Our Global Presence</h2>
+        <div class="animated-title-wrapper">
+            <div class="mask-overlay"></div>
+            <h2 class="animated-title">Our Global Presence</h2>
+        </div>
         <p>Operating in both North Africa and Europe, our main recycling facility is located in Tunisia—where PET bottles are collected, sorted, washed, and converted into premium PET flakes. We also maintain a distribution warehouse in Europe to serve local customers with fast, efficient deliveries.</p>
     </section>
 
     <section>
-        <h2>Experienced Team</h2>
+        <div class="animated-title-wrapper">
+            <div class="mask-overlay"></div>
+            <h2 class="animated-title">Experienced Team</h2>
+        </div>
         <p>Our experts have deep experience in plastics recycling, international trade, and quality management. Our team is dedicated to continuous improvement, adhering to the highest standards in every aspect of production and logistics.</p>
     </section>
 </main>
 
-<footer class="footer">
-    <p>&copy; 2025 RePET Global. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+<footer>
+    <div class="footer">
+        <div class="footer-columns-wrapper unselectable">
+            <!-- Social Media Spalte -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="https://facebook.com/deinprofil" aria-label="Facebook"><img src="img/tiktok_logo.svg" alt=""></a></li>
+                    <li><a href="https://twitter.com/deinprofil" aria-label="Twitter"><img src="img/whatsApp_logo.svg" alt=""></a></li>
+                    <li><a href="https://linkedin.com/company/deinfirma" aria-label="LinkedIn"><img src="img/instagram_logo.svg" alt=""></a></li>
+                </ul>
+            </div>
+
+            <!-- Link-Spalten -->
+            <nav class="footer-nav">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Products &amp; Services</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="sample.html">Request Sample</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <p>&copy; 2025 RePET Plex. All rights reserved.</p>
+    </div>
 </footer>
+
+<script src="menu-btn.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
