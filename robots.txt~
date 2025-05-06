@@ -1,0 +1,24 @@
+User-agent: *
+Disallow: /privacy-policy
+Disallow: /legal-notice
+Disallow: /404
+Disallow: /500
+
+Disallow: /de/privacy-policy
+Disallow: /de/impressum
+Disallow: /de/404
+Disallow: /de/500
+
+Disallow: /fr/privacy-policy
+Disallow: /fr/impressum
+Disallow: /fr/404
+Disallow: /fr/500
+
+Disallow: /ar/privacy-policy
+Disallow: /ar/impressum
+Disallow: /ar/404
+Disallow: /ar/500
+
+Sitemap: https://repetplex.com/sitemap.xml
+
+Host: repetplex.com

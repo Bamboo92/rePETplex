@@ -6,7 +6,8 @@
 
     /* Font Sizes */
     --fullscreen-h1: 5.5rem;
-    --fullscreen-h4: 1.75rem;
+    --fullscreen-h2: 4.5rem;
+    --fullscreen-h4: 2rem;
     --fullscreen-p: 1.75rem;
     --fullscreen-input: 2rem;
     --h1: 2.85rem;
@@ -989,6 +990,16 @@ footer {
         font-size: var(--fullscreen-p);
         margin-bottom: 3rem;
     }
+
+    .error-page h1 {
+        font-size: calc(3 * var(--fullscreen-h1));
+    }
+    .error-page h2 {
+        font-size: var(--fullscreen-h2);
+    }
+    .error-page button {
+        font-size: var(--fullscreen-p);
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -1099,7 +1110,6 @@ footer {
 .language-switcher {
     position: relative;
 }
-
 .lang-btn {
     background: none;
     border: none;
@@ -1114,43 +1124,127 @@ footer {
 .lang-dropdown {
     display: none;
     position: absolute;
-    right: -10px;
     background: var(--highlite-white);
     list-style: none;
+    height: auto;
     padding: 1rem 0 .3rem;
     margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 999;
     border-radius: var(--border-radius-smoothe);
-    box-shadow: 0 35px 35px -15px rgba(0, 0, 0, 0.10);
-}
-.lang-dropdown img {
-    width: 2rem;
-    min-width: 15px;
-    max-width: 35px;
-    transition: scale 0.2s ease;
-}
-.lang-dropdown img:hover {
-    scale: 1.1;
+    box-shadow: 0 35px 35px -15px rgba(0, 0, 0, .50);
 }
 .language-switcher:hover .lang-dropdown {
     display: block;
 }
 .lang-dropdown li {
-    padding: .5rem 10px;
+    line-height: 1;
+    height: 2.2rem;
+    width: 3.2rem;
+    overflow: hidden;
 }
 .lang-dropdown li a {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     text-decoration: none;
-    color: black;
+    transition: font-size 0.2s ease;
 }
-
+.lang-dropdown li:hover a {
+    font-size: var(--fullscreen-p);
+}
 .lang-btn img {
     transition: filter 0.3s ease;
 }
-
-/* Beim Hover über die gesamte Sprach-Auswahl wird das Haupt-Icon grau */
 .language-switcher:hover .lang-btn img {
     filter: grayscale(100%);
+}
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.error-page h1 {
+    font-weight: 1000;
+    color: var(--gray);
+    margin: 0;
+    text-align: center;
+}
+.error-page h2 {
+    text-align: center;
+}
+.error-page button {
+    align-self: center;
+    justify-self: center;
+}
+
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+}
+
+/* Ein Schritt (Step) */
+.timeline-step {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    align-items: stretch;
+    padding-inline: 1rem;
+    height: auto;
+    transition: background 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+}
+.timeline-step h3{
+    color: var(--off-black);
+    margin: 0;
+    transition: color 0.2s ease;
+}
+/* Icon-Container */
+.timeline-step img {
+    justify-self: center;
+    align-self: center;
+    width: 4rem;
+    transition: filter 0.4s ease-in-out;
+}
+
+.timeline-step:hover {
+    box-shadow: 0 35px 35px -15px rgba(0, 0, 0, 0.10);
+    border-radius: var(--border-radius-anti-corner);
+    background: var(--primary);
+    z-index: 1;
+}
+.timeline:hover .timeline-step:not(:hover) img {
+    filter: grayscale(100%);
+}
+.timeline-step:hover h3 {
+    color: var(--highlite-white);
+}
+.steps-line {
+    height: 100%;
+    width: 4px;
+    background-color: var(--primary);
+}
+.steps-line.first,
+.steps-line.last {
+    height: 100%;
+    width: 0;
+}
+.step-img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    padding-inline: .5rem;
+}
+.step-text-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-block: 3rem;
 }

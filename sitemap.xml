@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <url>
+        <loc>https://repetplex.com/</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://repetplex.com/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://repetplex.com/de/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://repetplex.com/fr/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://repetplex.com/ar/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://repetplex.com/" />
+    </url>
+
+    <url>
+        <loc>https://repetplex.com/sample</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://repetplex.com/sample" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://repetplex.com/de/sample" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://repetplex.com/fr/sample" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://repetplex.com/ar/sample" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://repetplex.com/sample" />
+    </url>
+
+    <url>
+        <loc>https://repetplex.com/products</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://repetplex.com/products" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://repetplex.com/de/products" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://repetplex.com/fr/products" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://repetplex.com/ar/products" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://repetplex.com/products" />
+    </url>
+
+    <url>
+        <loc>https://repetplex.com/contact</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://repetplex.com/contact" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://repetplex.com/de/contact" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://repetplex.com/fr/contact" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://repetplex.com/ar/contact" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://repetplex.com/contact" />
+    </url>
+
+    <url>
+        <loc>https://repetplex.com/contact</loc>
+        <lastmod>2025-04-29</lastmod>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://repetplex.com/about" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://repetplex.com/de/about" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://repetplex.com/fr/about" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://repetplex.com/ar/about" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://repetplex.com/about" />
+    </url>
+
+</urlset>
